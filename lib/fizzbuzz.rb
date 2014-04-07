@@ -2,22 +2,22 @@
 # We spent all day doing this because we are supposed TDD every single line and 
 # we are supposed to do this in 5min!
 
-# Let's define a method to find multiples of three.
+# Let's define a method to find numbers divisible by three.
 def divisible_by_three?(number)
 	number%3 == 0
 end
 
-# Method to find multiples of five
+# Method to find numbers divisible by five
 def divisible_by_five?(number)
 	number%5 == 0
 end
 
-# Method to find multiples of fifteen
+# Method to find numbers divisible by fifteen
 def divisible_by_fifteen?(number)
 	number%15 == 0
 	end
 
-# Now miltiples of three will return Fizz, multiple of five will return Buzz and multiple of fifteen will return FizzBuzz.
+# Now numbers divisible by three will return Fizz, numbers divisible by five will return Buzz and numbers divisible by fifteen will return FizzBuzz.
 # All the other numbers will be printed.
 def fizzbuzz(number)
 	return "FizzBuzz" if divisible_by_fifteen?(number)
