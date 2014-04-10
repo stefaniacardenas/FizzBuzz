@@ -1,7 +1,4 @@
 # This is a simple FizzBuzz game. 
-# We spent all day doing this because we are supposed TDD every single line and 
-# we are supposed to do this in 5min!
-
 # Let's define a method to find numbers divisible by three.
 def divisible_by_three?(number)
 	number%3 == 0
