@@ -1,32 +1,22 @@
-# This is a simple FizzBuzz game. 
-# We spent all day doing this because we are supposed TDD every single line and 
-# we are supposed to do this in 5min!
-
-# Let's define a method to find multiples of three.
-def divisible_by_three?(number)
-	number%3 == 0
+def divisible_by?(number, divisor)
+	number%divisor == 0
 end
 
-# Method to find multiples of five
-def divisible_by_five?(number)
-	number%5 == 0
+def divisible_by_3?(num)
+	divisible_by?(num,3)
 end
 
-# Method to find multiples of fifteen
-def divisible_by_fifteen?(number)
-	number%15 == 0
-	end
-
-# Now miltiples of three will return Fizz, multiple of five will return Buzz and multiple of fifteen will return FizzBuzz.
-# All the other numbers will be printed.
-def fizzbuzz(number)
-	return "FizzBuzz" if divisible_by_fifteen?(number)
-	return "Buzz" if divisible_by_five?(number)
-	return "Fizz" if divisible_by_three?(number)
-	number
+def divisible_by_5?(num)
+	divisible_by?(num,5)
 end
 
-#end finally let's print our FizzBuzz game!
-(1..100).to_a.each do |number|
-		puts fizzbuzz(number)
+def divisible_by_15?(num)
+	divisible_by?(num,15)
+end
+
+def fizzbuzz?(num)
+	return 'FizzBuzz' if divisible_by_15?(num)
+	return 'Fizz' if divisible_by_3?(num)
+	return 'Buzz' if divisible_by_5?(num)
+	num
 end
