@@ -1,7 +1,7 @@
 # FizzBuzz Kata
 ================
 
-This is the first kata I learnt at Makers Academy. It's a simple FizzBuzz developed in TDD.
+This is the first kata I learnt at [Makers Academy] (http://www.makersacademy.com/‎). It's a simple FizzBuzz game developed in TDD.
 
 Rules
 -----
