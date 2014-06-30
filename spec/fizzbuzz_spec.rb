@@ -1,43 +1,50 @@
-require "fizzbuzz"
+require 'fizzbuzz'
 
-describe "Fizzbuzz" do
-	it "knows that 3 is divisable by three" do
-		expect(divisible_by_3?(3)).to be_true
-	end
+describe 'fizzbuzz' do 
+	context 'game rules' do
 
-	it "knows that 1 is not divisible by three" do
-		expect(divisible_by_3?(1)).to be_false
-	end
-
-	it "knows that 5 is divisible by five" do
-		expect(divisible_by_5?(5)).to be_true
-	end
-
-	it "knows that 1 is not divisible by five" do
-		expect(divisible_by_5?(1)).to be_false
-	end
-	it "knows that 15 is divisible by three" do
-		expect(divisible_by_15?(15)).to be_true
-	end
-
-	it "knows that 1 is not divisible by fifteen" do
-		expect(divisible_by_15?(1)).to be_false
+		it 'knows three is divisible by 3' do
+			expect(divisible_by_three?(3)).to be true
 		end
-	it "returns the non divisible numbers" do
-		expect(fizzbuzz(1)).to eq 1
-	end
-	it "returns 'Fizz' if divisible by three" do
-		expect(fizzbuzz(3)).to eq 'Fizz'
+
+		it 'knows one is not divisible by 3' do
+			expect(divisible_by_three?(1)).to be false
+		end
+
+		it 'knows five is divisible by 5' do
+			expect(divisible_by_five?(5)).to be true
+		end
+
+		it 'knows one is not divisible by 5' do
+			expect(divisible_by_five?(1)).to be false
+		end
+
+		it 'knows fifteen is divisible by 15' do
+			expect(divisible_by_fifteen?(15)).to be true
+		end
+
+		it 'knows one is not divisible by 15' do
+			expect(divisible_by_fifteen?(1)).to be false
+		end
+
+		it 'returns Fizz for number divisible by three' do 
+			expect(play(3)).to eq 'Fizz'
+		end
 	end
 
-	it "returns 'Buzz' if divisible by five" do
-		expect(fizzbuzz(5)).to eq 'Buzz'
-	end
+	context 'when playing' do
 
-	it "returns 'FizzBuzz' if divisible by fifteen" do
-		expect(fizzbuzz(15)).to eq 'FizzBuzz'
-	end
+		it 'returns Buzz for number divisible by five' do 
+			expect(play(5)).to eq 'Buzz'
+		end
 
+		it 'returns FizzBuzz for number divisible by fifteen' do 
+			expect(play(15)).to eq 'FizzBuzz'
+		end
+
+		it 'returns the number for all the others' do 
+			expect(play(1)).to eq 1
+		end
+	end
 
 end
-
